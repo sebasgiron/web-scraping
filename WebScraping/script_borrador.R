@@ -5,8 +5,12 @@ URL.REPES  <- "https://www.cromosrepes.com/listas/marcar/repes/6463"
 URL.FALTAS <- "https://www.cromosrepes.com/listas/marcar/faltas/6463"
 URL.LOGIN  <- "https://www.cromosrepes.com/usuario/login"
 
-LOGIN.NICK <- "freddo79"
-LOGIN.PASSWORD <- "wEEFaz8E5dZWZEA"
+source("param_usuario.R", echo = T)
+
+# param_usuario tiene que haber definido lo siguiente
+stopifnot(!is.na(LOGIN.NICK))
+stopifnot(!is.na(LOGIN.PASSWORD))
+
 
 source("login.R", echo = T)
 
